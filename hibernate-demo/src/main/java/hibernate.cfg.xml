@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings. -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/mydb</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">admin123</property>
+
+		<!-- Sql dialect. -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<!-- Printing the sql queries to the console. -->
+		<property name="show_sql">true</property>
+
+		<!-- Validating the database schema. -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Model class. -->
+		<mapping class="com.demo.Employee" />
+	</session-factory>
+</hibernate-configuration>

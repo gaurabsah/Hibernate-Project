@@ -11,6 +11,7 @@ import org.hibernate.criterion.Projections;
 
 public class AppMain {
 
+	@SuppressWarnings({ "deprecation", "unchecked" })
 	public static void main(String[] args) {
 		Configuration config = new Configuration();
 		config.configure("hibernate.cfg.xml");
